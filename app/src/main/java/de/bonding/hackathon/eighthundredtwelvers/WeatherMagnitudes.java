@@ -1,18 +1,16 @@
 package de.bonding.hackathon.eighthundredtwelvers;
 
-/**
- * Created by Sascha on 18.11.2016.
- */
 
-enum Weather_magnitudes {
-   WEATHER, TEMPERATURE, WINDSPEED, HUMIDITY, PRESSURE;
+public enum WeatherMagnitudes {
+
+           WEATHER, TEMPERATURE, WINDSPEED, HUMIDITY, PRESSURE, LOCATION;
    private String value;
 
-void setValue(String value) {
+   public String getValue() {
+      return value;
+   }
 
-}
-String getValue() {
-   return value;
-}
-
+   public void setValue(String value) {
+      this.value = value;
+   }
 }

@@ -19,8 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        WeatherAtMoment w = new WeatherAtMoment();
-        w.updateWeather(this);
+       WeatherAtMoment w = new WeatherAtMoment();
+
+        //Die GEODATEN anstatt von 55 und 55 eingeben
+        w.updateWeather(this, "55", "55");
 
 
 
