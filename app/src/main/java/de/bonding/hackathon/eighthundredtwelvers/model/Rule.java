@@ -22,6 +22,12 @@ public class Rule extends BaseModel {
     @PrimaryKey
     long id;
 
+    public Rule() {
+        this.name = name;
+        this.deltaT = deltaT;
+        this.id = id;
+    }
+
     public Rule(String name, long deltaT, long id) {
         this.name = name;
         this.deltaT = deltaT;
@@ -34,9 +40,9 @@ public class Rule extends BaseModel {
 
     public static List<Rule> getDummy() {
         List<Rule> rules = new ArrayList<>(3);
-        rules.add(new Rule("ABC", 1, 0));
-        rules.add(new Rule("DEF", 33, 1));
-        rules.add(new Rule("GHI", 4444, 2));
+        rules.add(new Rule("Dies sind", 1, 0));
+        rules.add(new Rule("Dummy-Daten", 33, 1));
+        rules.add(new Rule("ACHTUNG!", 4444, 2));
         return rules;
     }
 
