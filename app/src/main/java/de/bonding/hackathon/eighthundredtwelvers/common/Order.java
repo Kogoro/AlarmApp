@@ -20,4 +20,23 @@ public enum Order {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        switch (this) {
+            case LESS_THAN:
+                return "<";
+            case LESS_THAN_OR_EQUAL:
+                return "</=";
+            case EQUAL:
+                return "=";
+            case MORE_THAN_OR_EQUAL:
+                return "=/>";
+            case MORE_THAN:
+                return "<";
+            case NOT_EQUAL:
+                return "=|=";
+        }
+        return "FEHLER";
+    }
 }
