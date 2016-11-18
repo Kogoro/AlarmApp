@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +44,13 @@ public class RuleRecyclerViewAdapter extends RecyclerView.Adapter<RuleRecyclerVi
                 Toast.makeText(context, "Delete Click", Toast.LENGTH_SHORT).show();
             }
         });
+        holder.mContentView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Zur nächsten seite", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,7 +66,7 @@ public class RuleRecyclerViewAdapter extends RecyclerView.Adapter<RuleRecyclerVi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-        public final ImageButton mButtonView;
+        public final ImageView mButtonView;
         public final TextView mContentView;
         public DummyItem mItem;
 
@@ -66,7 +74,7 @@ public class RuleRecyclerViewAdapter extends RecyclerView.Adapter<RuleRecyclerVi
             super(view);
             mView = view;
             mContentView = (TextView) view.findViewById(R.id.item_rule_tv);
-            mButtonView = (ImageButton) view.findViewById(R.id.item_rule_ib);
+            mButtonView = (ImageView) view.findViewById(R.id.item_rule_ib);
         }
 
         @Override
