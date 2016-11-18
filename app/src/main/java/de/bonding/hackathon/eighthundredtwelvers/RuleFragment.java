@@ -10,16 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import de.bonding.hackathon.eighthundredtwelvers.dummy.DummyContent;
-import de.bonding.hackathon.eighthundredtwelvers.dummy.DummyContent.DummyItem;
-
-import java.util.List;
+import de.bonding.hackathon.eighthundredtwelvers.model.Rule;
 
 /**
  * A fragment representing a list of Items.
- * <p/>
- * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
- * interface.
  */
 public class RuleFragment extends Fragment {
 
@@ -58,7 +52,7 @@ public class RuleFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new RuleRecyclerViewAdapter(DummyContent.ITEMS));
+            recyclerView.setAdapter(new RuleRecyclerViewAdapter(Rule.getAll()));
         }
         return view;
     }
