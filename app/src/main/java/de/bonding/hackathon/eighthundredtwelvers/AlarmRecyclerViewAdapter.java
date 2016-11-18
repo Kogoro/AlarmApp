@@ -6,17 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import de.bonding.hackathon.eighthundredtwelvers.model.Alarm;
+
 /**
  * Created by csontag on 11/18/16.
  */
 
 public class AlarmRecyclerViewAdapter extends RecyclerView.Adapter<AlarmRecyclerViewAdapter.AlarmViewHolder> {
-    private String[] mDataset;
+    private Alarm[] mDataset;
 
 
     public static class AlarmViewHolder extends RecyclerView.ViewHolder {
-
-        // each data item is just a string in this case
+        public TextView
 
         public AlarmViewHolder(View v) {
             super(v);
@@ -24,7 +25,7 @@ public class AlarmRecyclerViewAdapter extends RecyclerView.Adapter<AlarmRecycler
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public AlarmRecyclerViewAdapter(String[] myDataset) {
+    public AlarmRecyclerViewAdapter(Alarm[] myDataset) {
         mDataset = myDataset;
     }
 
