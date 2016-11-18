@@ -2,6 +2,7 @@ package de.bonding.hackathon.eighthundredtwelvers;
 
 
 public enum WeatherMagnitudes {
+
            WEATHER, TEMPERATURE, WINDSPEED, HUMIDITY, PRESSURE, LOCATION;
    private String value;
 

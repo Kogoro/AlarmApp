@@ -27,7 +27,7 @@
                 android:text="22 Grad"
                 android:layout_width="312dp"
                 android:layout_height="match_parent"
-                android:id="@+id/temperatureText"
+                android:id="@+id/textView"
                 android:textSize="@android:dimen/app_icon_size" />
 
 
@@ -37,7 +37,7 @@
             android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/locationText" />
+            android:id="@+id/textView4" />
 
 
     </LinearLayout>
