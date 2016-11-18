@@ -1,13 +1,16 @@
 package de.bonding.hackathon.eighthundredtwelvers;
 
 import android.content.Context;
+import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import de.bonding.hackathon.eighthundredtwelvers.model.Alarm;
 
@@ -44,16 +47,13 @@ public class OverviewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        new Alarm(System.currentTimeMillis()+10,"Test",false).insert();
+
         View v = inflater.inflate(R.layout.fragment_overview, container, false);
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.overview_alarm_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));
-
-        Alarm[] alarms = new Alarm[1];
-        alarms[0] = new Alarm();
-        alarms[0].name = "Test";
-        alarms[0].time = 1479485409;
-
-        recyclerView.setAdapter(new AlarmRecyclerViewAdapter(alarms));
+        recyclerView.addItemDecoration(new DividerItemDecoration(v.getContext(), ((LinearLayout)v).getOrientation()));
+        recyclerView.setAdapter(new AlarmRecyclerViewAdapter(Alarm.getAll()));
         return v;
     }
 
