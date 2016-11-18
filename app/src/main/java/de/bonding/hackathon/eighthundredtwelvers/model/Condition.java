@@ -6,12 +6,13 @@ import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
 import com.raizlabs.android.dbflow.structure.BaseModel;
 
+import de.bonding.hackathon.eighthundredtwelvers.WeatherMagnitudes;
 import de.bonding.hackathon.eighthundredtwelvers.common.Order;
 
 @Table(database = AppDatabase.class)
 public class Condition extends BaseModel {
     @Column
-    public String aspect;
+    public WeatherMagnitudes magnitude;
     @Column
     public Order order;
     @Column
@@ -22,7 +23,7 @@ public class Condition extends BaseModel {
     Rule rule;
 
     public boolean eval() {
-        int observedValue = 0; //TODO
+        int observedValue = Integer.parseInt(magnitude.getValue()); //TODO
         return order.compare(observedValue, value);
     }
 
