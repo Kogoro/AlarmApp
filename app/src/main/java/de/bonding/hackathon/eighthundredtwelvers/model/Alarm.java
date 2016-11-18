@@ -8,12 +8,17 @@ import com.raizlabs.android.dbflow.structure.BaseModel;
 
 @Table(database = AppDatabase.class)
 public class Alarm extends BaseModel {
+    @Column
+    /**
+     * The default time to sound this alarm.
+     */
+    public long time;
     @PrimaryKey
     long id;
     @ForeignKey
     Rule rule;
     @Column
-    long time;
-    @Column
     String uriToPlay;
+    @Column
+    String name;
 }

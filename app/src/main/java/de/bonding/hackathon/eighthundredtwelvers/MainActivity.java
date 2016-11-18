@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        this.getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment, new RuleFragment()).commit();
+
         WeatherAtMoment w = new WeatherAtMoment();
         w.updateWeather(this);
 
@@ -26,4 +28,3 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
-
