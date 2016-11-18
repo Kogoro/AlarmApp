@@ -5,4 +5,5 @@ package de.bonding.hackathon.eighthundredtwelvers;
  */
 
 public enum Weather_magnitudes {
+   WEATHER, TEMPERATURE, WINDSPEED, HUMIDITY, PRESSURE
 }
