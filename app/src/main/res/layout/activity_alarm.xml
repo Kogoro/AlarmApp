@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_alarm_time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        tools:text="24:00"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_alarm_status"
+        android:gravity="center_vertical|center_horizontal"
+        tools:text="Rain, 20° C"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <Button
+        android:text="Stop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_alarm_stop"
+        android:layout_margin="8dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:layout_gravity="bottom|center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4" />
+</LinearLayout>
