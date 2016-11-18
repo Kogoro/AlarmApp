@@ -19,13 +19,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       WeatherAtMoment w = new WeatherAtMoment();
+        this.getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment, new RuleFragment()).commit();
 
-        //Die GEODATEN anstatt von 55 und 55 eingeben
+        WeatherAtMoment w = new WeatherAtMoment();
         w.updateWeather(this, "55", "55");
 
 
 
     }
 }
-
