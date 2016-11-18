@@ -1,5 +1,6 @@
 package de.bonding.hackathon.eighthundredtwelvers;
 
+import android.content.Context;
 import android.util.Log;
 
 import github.vatsal.easyweather.Helper.TempUnitConverter;
@@ -13,16 +14,16 @@ import static de.bonding.hackathon.eighthundredtwelvers.BuildConfig.OWM_API_KEY;
  * Created by Sascha on 18.11.2016.
  */
 
-public class Weather {
+public class WeatherAtMoment {
     private String weather;
     private Double temperature;
     private String windSpeed;
     private String humidity;
     private String pressure;
 
-    private void updateWeather() {
+    public void updateWeather(Context context) {
         WeatherMap weatherMap;
-       weatherMap = new WeatherMap(this, OWM_API_KEY);
+       weatherMap = new WeatherMap(context, OWM_API_KEY);
 
         weatherMap.getCityWeather("Braunschweig", new WeatherCallback() {
             @Override
