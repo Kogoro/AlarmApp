@@ -19,7 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity android:name=".AlarmActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,8 +27,6 @@
             </intent-filter>
         </activity>
         <receiver android:name=".AlarmReceiver" />
-=======
->>>>>>> 245d98776c7edc2bc68a2345425cc558ca0a194f
     </application>
 
 </manifest>

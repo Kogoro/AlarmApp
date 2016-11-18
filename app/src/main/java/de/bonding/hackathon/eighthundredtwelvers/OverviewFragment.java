@@ -50,7 +50,7 @@ public class OverviewFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_overview, container, false);
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.overview_alarm_list);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));
 
         Alarm[] alarms = new Alarm[1];
         alarms[0] = new Alarm();
