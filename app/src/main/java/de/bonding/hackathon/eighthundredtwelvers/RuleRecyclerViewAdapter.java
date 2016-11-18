@@ -9,9 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
-
 import de.bonding.hackathon.eighthundredtwelvers.model.Rule;
+
+import java.util.List;
 
 /**
  * TODO: Replace the implementation with code for your data type.

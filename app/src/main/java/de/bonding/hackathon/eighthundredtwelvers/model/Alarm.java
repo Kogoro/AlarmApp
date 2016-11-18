@@ -16,9 +16,11 @@ public class Alarm extends BaseModel {
     @PrimaryKey
     long id;
     @ForeignKey
-    Rule rule;
+    public Rule rule;
     @Column
-    String uriToPlay;
+    public String uriToPlay;
     @Column
-    String name;
+    public String name;
+    @Column
+    public boolean status;
 }

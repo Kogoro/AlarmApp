@@ -17,8 +17,7 @@ public class Rule extends BaseModel {
      */
     public long deltaT;
     @Column
-    public
-    String name;
+    public String name;
     @PrimaryKey
     long id;
 
