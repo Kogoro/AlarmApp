@@ -69,7 +69,7 @@ public class AlarmRecyclerViewAdapter extends RecyclerView.Adapter<AlarmRecycler
         try{
             long dv = Long.valueOf(timestamp)*1000;
             Date df = new java.util.Date(dv);
-            return new SimpleDateFormat("hh:mma").format(df);
+            return new SimpleDateFormat("HH:MM").format(df);
         }catch (Exception e) {
         }
         return "";
