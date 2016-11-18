@@ -37,4 +37,6 @@ dependencies {
     compile "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:${dbflow_version}"
 
     compile "net.zetetic:android-database-sqlcipher:${sqlcipher_version}@aar"
+
+    compile 'com.google.maps:google-maps-services:0.1.16'
 }
