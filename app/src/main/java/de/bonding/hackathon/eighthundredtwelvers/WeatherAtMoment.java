@@ -16,6 +16,7 @@ import static de.bonding.hackathon.eighthundredtwelvers.BuildConfig.OWM_API_KEY;
 
 public class WeatherAtMoment {
 
+    private String iconLink = "Erst UpdateWeather nutzen";
 
 
     public void updateWeather(Context context, String latitude, String longitude) {
@@ -62,6 +63,10 @@ public class WeatherAtMoment {
                 Log.e("GetCityWeather", "failure");
             }
         });
+    }
+
+    public String getIconLink() {
+        return iconLink;
     }
 
 
