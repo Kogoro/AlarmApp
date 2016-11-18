@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:text="Temperatur"
+        android:layout_width="wrap_content"
+        android:layout_height="71dp"
+        android:id="@+id/item_rule_tv"
+        android:layout_weight="0.88"
+        tools:textSize="30sp"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        android:id="@+id/item_rule_ib" />
+
+</LinearLayout>
