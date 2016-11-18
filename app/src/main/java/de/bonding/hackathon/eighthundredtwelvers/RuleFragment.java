@@ -17,6 +17,8 @@ import de.bonding.hackathon.eighthundredtwelvers.model.Rule;
  */
 public class RuleFragment extends Fragment {
 
+    RecyclerView recyclerView;
+
     private int mColumnCount = 1;
 
     /**
@@ -54,6 +56,8 @@ public class RuleFragment extends Fragment {
             }
             recyclerView.setAdapter(new RuleRecyclerViewAdapter(Rule.getAll()));
         }
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_rules);
+        recyclerView.setAdapter(new RuleRecyclerViewAdapter(Rule.getDummy()));
         return view;
     }
 
