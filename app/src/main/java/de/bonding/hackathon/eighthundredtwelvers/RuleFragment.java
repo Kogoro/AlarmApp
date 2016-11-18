@@ -10,14 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import de.bonding.hackathon.eighthundredtwelvers.model.Rule;
 
 /**
  * A fragment representing a list of Items.
- * <p/>
- * Activities containing this fragment MUST implement the
- * interface.
  */
 public class RuleFragment extends Fragment {
+
+    RecyclerView recyclerView;
 
     private int mColumnCount = 1;
 
@@ -54,8 +54,10 @@ public class RuleFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            //recyclerView.setAdapter(new RuleRecyclerViewAdapter());
+            recyclerView.setAdapter(new RuleRecyclerViewAdapter(Rule.getAll()));
         }
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_rules);
+        recyclerView.setAdapter(new RuleRecyclerViewAdapter(Rule.getDummy()));
         return view;
     }
 
