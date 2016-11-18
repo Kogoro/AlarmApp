@@ -31,7 +31,9 @@ public class EditAlarm extends AppCompatActivity {
         nameET = (EditText) findViewById(R.id.alarmnameET);
         timeET = (EditText) findViewById(R.id.timeET);
         ruleS = (Spinner) findViewById(R.id.ruleS);
-        ruleS.setAdapter(new ArrayAdapter<Rule>(this, R.layout.support_simple_spinner_dropdown_item));
+        ArrayAdapter<Rule> ad = new ArrayAdapter<Rule>(this, R.layout.support_simple_spinner_dropdown_item);
+        ad.addAll(Rule.getDummy());
+        ruleS.setAdapter(ad);
         makeAlarmBTN = (Button) findViewById(R.id.makeAlarmBTN);
         makeAlarmBTN.setOnClickListener(new View.OnClickListener() {
             @Override
