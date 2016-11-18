@@ -47,8 +47,6 @@ public class OverviewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        new Alarm(System.currentTimeMillis()+10,"Test",false).insert();
-
         View v = inflater.inflate(R.layout.fragment_overview, container, false);
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.overview_alarm_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));

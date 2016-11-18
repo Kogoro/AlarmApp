@@ -54,8 +54,13 @@ public class NewRuleFragment extends Fragment {
         orderS = (Spinner) v.findViewById(R.id.orderS);
         magnitudeS = (Spinner) v.findViewById(R.id.magnitudeS);
         valueET = (EditText) v.findViewById(R.id.valueET);
-        orderS.setAdapter(new ArrayAdapter<Order>(getContext(), R.layout.support_simple_spinner_dropdown_item));
+        ArrayAdapter<Order> adO = new ArrayAdapter<Order>(getContext(), R.layout.support_simple_spinner_dropdown_item);
+        adO.addAll(Order.values());
+        orderS.setAdapter(adO);
         magnitudeS.setAdapter(new ArrayAdapter<Order>(getContext(), R.layout.support_simple_spinner_dropdown_item));
+        ArrayAdapter<WeatherMagnitudes> mO = new ArrayAdapter<WeatherMagnitudes>(getContext(), R.layout.support_simple_spinner_dropdown_item);
+        mO.addAll(WeatherMagnitudes.values());
+        magnitudeS.setAdapter(mO);
         makeBTN = (Button) v.findViewById(R.id.makeruleBTN);
         makeBTN.setOnClickListener(new View.OnClickListener() {
             @Override

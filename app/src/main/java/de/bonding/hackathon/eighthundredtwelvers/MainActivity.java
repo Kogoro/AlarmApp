@@ -41,12 +41,12 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id){
             case R.id.addAlarm:
-                //Intent i = new Intent(this, )
-                //startActivity(i);
+                Intent i = new Intent(this, EditAlarm.class);
+                startActivity(i);
                 break;
             case R.id.goToRules:
-                Intent i = new Intent(this, RuleActivity.class);
-                startActivity(i);
+                Intent i2 = new Intent(this, RuleActivity.class);
+                startActivity(i2);
                 break;
         }
         return super.onOptionsItemSelected(item);
