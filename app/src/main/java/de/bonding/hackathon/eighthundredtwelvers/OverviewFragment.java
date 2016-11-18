@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,12 +47,17 @@ public class OverviewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View v = inflater.inflate(R.layout.fragment_overview, container, false);
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.overview_alarm_list);
-        List<Alarm> alarms = new ArrayList<>();
-        alarms.add(new Alarm())
-        recyclerView.setAdapter(new AlarmRecyclerViewAdapter());
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+
+        Alarm[] alarms = new Alarm[1];
+        alarms[0] = new Alarm();
+        alarms[0].name = "Test";
+        alarms[0].time = 1479485409;
+
+        recyclerView.setAdapter(new AlarmRecyclerViewAdapter(alarms));
         return v;
     }
 

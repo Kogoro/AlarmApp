@@ -18,7 +18,7 @@ public class Rule extends BaseModel {
     @PrimaryKey
     long id;
     @Column
-    String name;
+    public String name;
 
     public boolean eval() {
         List<Condition> conditions = SQLite.select().from(Condition.class).where(Condition_Table.rule_id.eq(id)).queryList();
