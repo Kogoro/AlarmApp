@@ -19,4 +19,6 @@ public class Alarm extends BaseModel {
     Rule rule;
     @Column
     String uriToPlay;
+    @Column
+    String name;
 }
