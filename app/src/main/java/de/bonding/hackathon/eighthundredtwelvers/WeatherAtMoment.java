@@ -15,11 +15,7 @@ import static de.bonding.hackathon.eighthundredtwelvers.BuildConfig.OWM_API_KEY;
  */
 
 public class WeatherAtMoment {
-    private String weather;
-    private Double temperature;
-    private String windSpeed;
-    private String humidity;
-    private String pressure;
+    Weather_magnitudes werte =
 
     public void updateWeather(Context context) {
         WeatherMap weatherMap;
