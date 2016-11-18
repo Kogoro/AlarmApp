@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,9 +18,10 @@
     </android.support.v7.widget.Toolbar>
 
     <FrameLayout
+        android:layout_marginTop="?attr/actionBarSize"
         android:id="@+id/main_fragment"
+        android:name="de.bonding.hackathon.eighthundredtwelvers.OverviewFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="de.bonding.hackathon.eighthundredtwelvers.OverviewFragment"
         tools:layout="@layout/fragment_overview"/>
 </RelativeLayout>

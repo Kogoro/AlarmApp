@@ -17,10 +17,11 @@ public class Condition extends BaseModel {
     public Order order;
     @Column
     public int value;
+    @ForeignKey
+    public
+    Rule rule;
     @PrimaryKey
     long id;
-    @ForeignKey
-    Rule rule;
 
     public boolean eval() {
         int observedValue = Integer.parseInt(magnitude.getValue()); //TODO

@@ -57,7 +57,7 @@ public class RuleFragment extends Fragment {
             recyclerView.setAdapter(new RuleRecyclerViewAdapter(Rule.getAll()));
         }
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_rules);
-        recyclerView.setAdapter(new RuleRecyclerViewAdapter(Rule.getDummy()));
+       // recyclerView.setAdapter(new RuleRecyclerViewAdapter(Rule.getDummy()));
         return view;
     }
 

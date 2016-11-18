@@ -5,17 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import github.vatsal.easyweather.Helper.TempUnitConverter;
-import github.vatsal.easyweather.Helper.WeatherCallback;
-import github.vatsal.easyweather.WeatherMap;
-import github.vatsal.easyweather.retrofit.models.Weather;
-import github.vatsal.easyweather.retrofit.models.WeatherResponseModel;
-
-import static de.bonding.hackathon.eighthundredtwelvers.BuildConfig.OWM_API_KEY;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
                 //startActivity(i);
                 break;
             case R.id.goToRules:
-                fm.beginTransaction().replace(R.id.main_fragment, new RuleFragment());
+                Intent i = new Intent(this, RuleActivity.class);
+                startActivity(i);
                 break;
         }
         return super.onOptionsItemSelected(item);
