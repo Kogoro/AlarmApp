@@ -15,7 +15,6 @@ import static de.bonding.hackathon.eighthundredtwelvers.BuildConfig.OWM_API_KEY;
  */
 
 public class WeatherAtMoment {
-    Weather_magnitudes werte =
 
     public void updateWeather(Context context) {
         WeatherMap weatherMap;

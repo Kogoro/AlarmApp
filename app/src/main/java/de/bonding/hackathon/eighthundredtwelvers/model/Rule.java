@@ -17,11 +17,6 @@ public class Rule extends BaseModel {
     public long deltaT;
     @PrimaryKey
     long id;
-    @Column
-    /**
-     * The difference in milliseconds this rule will effect.
-     */
-    public long deltaT;
 
     public boolean eval() {
         List<Condition> conditions = SQLite.select().from(Condition.class).where(Condition_Table.rule_id.eq(id)).queryList();
