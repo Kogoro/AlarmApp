@@ -53,4 +53,8 @@ public class Rule extends BaseModel {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
 }
